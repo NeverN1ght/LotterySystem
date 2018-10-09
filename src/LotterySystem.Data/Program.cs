@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Confluent.Kafka;
+using LotterySystem.MessageBus;
 
 namespace LotterySystem.Data
 {
@@ -6,7 +10,11 @@ namespace LotterySystem.Data
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MainAsync(args).GetAwaiter().GetResult();
+        }
+
+        private static async Task MainAsync(string[] args)
+        {
         }
     }
 }

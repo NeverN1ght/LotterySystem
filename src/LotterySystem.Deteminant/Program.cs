@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LotterySystem.Deteminant
+namespace LotterySystem.Determinant
 {
     class Program
     {

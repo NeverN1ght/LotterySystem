@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotterySystem.Generator", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotterySystem.ActivityEmulator", "src\LotterySystem.ActivityEmulator\LotterySystem.ActivityEmulator.csproj", "{2CC8166B-CCD2-4C98-8CC0-267697E0917F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotterySystem.Deteminant", "src\LotterySystem.Deteminant\LotterySystem.Deteminant.csproj", "{F236BCB9-9C67-494D-A58E-7823CB67CA95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotterySystem.Determinant", "src\LotterySystem.Deteminant\LotterySystem.Determinant.csproj", "{F236BCB9-9C67-494D-A58E-7823CB67CA95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotterySystem.MessageBus", "src\LotterySystem.MessageBus\LotterySystem.MessageBus.csproj", "{2AB5F7BA-07F8-469D-B364-244BA2ED5613}"
 EndProject

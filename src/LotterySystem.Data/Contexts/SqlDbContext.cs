@@ -9,10 +9,7 @@ namespace LotterySystem.Data.Contexts
         public DbSet<Album> Albums { get; set; }
         public DbSet<Photo> Photos { get; set; }
 
-        public SqlDbContext(DbContextOptions options) : base(options)
-        {
-            Database.EnsureDeleted();
-        }
+        public SqlDbContext(DbContextOptions options) : base(options) {}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

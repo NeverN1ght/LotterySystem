@@ -2,8 +2,10 @@
 
 namespace LotterySystem.Data.Abstractions
 {
-    public interface IRepository<TEntity> where TEntity : Entity
+    public interface IRepository
     {
-        Task AddAsync(TEntity entity);
+        Task AddAsync<TEntity>(TEntity entity) where TEntity : Entity;
+
+        Task<int> GetEntityCountAsync<TEntity>() where TEntity : Entity;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Confluent.Kafka;
 using Confluent.Kafka.Serialization;
 
@@ -26,7 +27,7 @@ namespace LotterySystem.MessageBus
             }
         }) {}
 
-        public void SubscribeOn<T>(string[] topics, Action<T> action) where T: class 
+        public void SubscribeOn<T>(string[] topics, Func<T, Task> action) where T: class 
         {
             _consumer.Subscribe(topics);
 

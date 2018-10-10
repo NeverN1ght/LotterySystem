@@ -3,6 +3,9 @@
     public enum MessageTypes : byte
     {
         AddNewUserCommand,
-        AddNewAlbumCommand
+        AddNewAlbumCommand,
+        AddNewPhotoCommand,
+        GetPhotoCountCommand,
+        PhotoCountMessage
     }
 }

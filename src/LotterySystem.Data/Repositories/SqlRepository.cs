@@ -4,20 +4,24 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LotterySystem.Data.Repositories
 {
-    public class SqlRepository<TEntity> : IRepository<TEntity> where TEntity: Entity
+    public class SqlRepository : IRepository
     {
         private readonly DbContext _context;
-        private readonly DbSet<TEntity> _dbSet;
 
         public SqlRepository(DbContext context)
         {
             _context = context;
-            _dbSet = _context.Set<TEntity>();
         }
 
-        public async Task AddAsync(TEntity entity)
+        public async Task AddAsync<TEntity>(TEntity entity) where TEntity : Entity
         {
-            await _context.AddAsync(entity);
+            await _context.Set<TEntity>().AddAsync(entity);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<int> GetEntityCountAsync<TEntity>() where TEntity : Entity
+        {
+            return await _context.Set<TEntity>().CountAsync();
         }
     }
 }

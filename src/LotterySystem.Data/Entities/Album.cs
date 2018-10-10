@@ -5,8 +5,6 @@ namespace LotterySystem.Data.Entities
 {
     public class Album : Entity
     {
-        public int Id { get; set; }
-
         public int UserId { get; set; }
 
         public string Title { get; set; }
